@@ -95,9 +95,11 @@ String inTemp = stdin.readLineSync().toString();
     if (userAnswer == correctAnswer) {
       numCorrect++;
       print("Correct!");
+      print("To stop playing, press a letter on your keyboard");
     }
     else{
       print("Wrong");
+      print("To stop playing, press a letter on your keyboard");
     }
 
 
