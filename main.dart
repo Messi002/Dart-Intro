@@ -134,23 +134,49 @@ String getPlayerMove(){
 }
 
 String getComputerMove(){
-  Random rand = Random();
+  Random rand = new Random();
  int randNum = rand.nextInt(3);
  
  switch (randNum) {
-      case "R":
+      case 0:
         return "Rock";
         break;
-         case "S":
+         case 1:
         return "Scissors";
         break;
-         case "P":
+         case 2:
         return "Paper";
-        
         break;
       default:
-      return "Quit";
       break;
     }
+
+}
+
+String whoWon(String playerMove, String computerMove){
+    if (playerMove == computerMove) { //if the same, it's a tie
+    return "Tie";
+    } else if (playerMove == "Rock" && computerMove == "Scissors") {
+    return "You Win!";
+    } else if (playerMove == "Scissors" && computerMove == "Paper") {
+    return "You Win!";
+    } else if (playerMove == "Paper" && computerMove == "Rock") {
+    return "You Win!";
+    } else { // if it's not a tie and you didn't win, computer won
+    return "Computer Wins!";
+}
+
+}
+
+void main(List<String> args) {
+  
+  print("Rock, Paper, Scissors shoot! ");
+
+  String playerMove = getPlayerMove();
+  print("You have entered $playerMove");
+  String computerMove = getComputerMove();
+  print("Computer's own choice $computerMove");
+
+  print(whoWon(playerMove, computerMove));
 
 }
