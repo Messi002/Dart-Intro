@@ -53,7 +53,36 @@
 
 
 import 'dart:math';
+import 'dart:io';
 void main(List<String> args) {
-  const PI = 3.4678;
-  print(PI);
+  Random rand = new Random();
+ int correctAnswer, userAnswer, operand1, operand2, operation, questionAttempted =0, numCorrect =0;
+ 
+   while(true){
+     operation = rand.nextInt(3);
+     operand1 = rand.nextInt(11);
+     operand2 = rand.nextInt(11);
+   }
+
+   switch (operation) {
+    case value:
+       
+       break;
+    case value:
+       
+       break;
+    case value:
+       
+       break;  
+     default:
+   }
+
+
+
+
+
+
+
+
+
 }
