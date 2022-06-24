@@ -55,34 +55,53 @@
 import 'dart:math';
 import 'dart:io';
 void main(List<String> args) {
+ 
+  int correctAnswer=0, userAnswer, operand1, operand2, operation, questionsAttempted =0, numCorrect =0;
   Random rand = new Random();
- int correctAnswer, userAnswer, operand1, operand2, operation, questionAttempted =0, numCorrect =0;
  
    while(true){
      operation = rand.nextInt(3);
      operand1 = rand.nextInt(11);
      operand2 = rand.nextInt(11);
-   }
 
-   switch (operation) {
-    case value:
-       
+     switch (operation) {
+    case 0: //addition
+       print("$operand1 + $operand2 = ");
+       correctAnswer= operand1 + operand2;
        break;
-    case value:
-       
+    case 1: //subtraction
+        print("$operand1 - $operand2 = ");
+       correctAnswer= operand1 - operand2;
        break;
-    case value:
-       
+    case 2: //multiplication
+        print("$operand1 * $operand2 = ");
+       correctAnswer= operand1 * operand2;
        break;  
      default:
    }
 
+String inTemp = stdin.readLineSync().toString();
+
+    try {
+       userAnswer = int.parse(inTemp);
+    } on FormatException {
+       print("uh oh, could not be turned into integer\n");
+       print("Thanks for playing!\n");
+       print("You got $numCorrect out of $questionsAttempted correct.");
+       break;
+    }
 
 
+    if (userAnswer == correctAnswer) {
+      numCorrect++;
+      print("Correct!");
+    }
+    else{
+      print("Wrong");
+    }
 
 
-
-
-
+questionsAttempted++;
+   }
 
 }
