@@ -52,58 +52,105 @@
 // }
 
 
-import 'dart:math';
+// import 'dart:math';
+// import 'dart:io';
+// void main(List<String> args) {
+ 
+//   int correctAnswer=0, userAnswer, operand1, operand2, operation, questionsAttempted =0, numCorrect =0;
+//   Random rand = new Random();
+ 
+//    while(true){
+//      operation = rand.nextInt(3);
+//      operand1 = rand.nextInt(11);
+//      operand2 = rand.nextInt(11);
+
+//      switch (operation) {
+//     case 0: //addition
+//        print("$operand1 + $operand2 = ");
+//        correctAnswer= operand1 + operand2;
+//        break;
+//     case 1: //subtraction
+//         print("$operand1 - $operand2 = ");
+//        correctAnswer= operand1 - operand2;
+//        break;
+//     case 2: //multiplication
+//         print("$operand1 * $operand2 = ");
+//        correctAnswer= operand1 * operand2;
+//        break;  
+//      default:
+//    }
+
+// String inTemp = stdin.readLineSync().toString();
+
+//     try {
+//        userAnswer = int.parse(inTemp);
+//     } on FormatException {
+//        print("uh oh, could not be turned into integer\n");
+//        print("Thanks for playing!\n");
+//        print("You got $numCorrect out of $questionsAttempted correct.");
+//        break;
+//     }
+
+
+//     if (userAnswer == correctAnswer) {
+//       numCorrect++;
+//       print("Correct!");
+//       print("To stop playing, press a letter on your keyboard");
+//     }
+//     else{
+//       print("Wrong");
+//       print("To stop playing, press a letter on your keyboard");
+//     }
+
+
+// questionsAttempted++;
+//    }
+
+// }
+
+
 import 'dart:io';
-void main(List<String> args) {
+import 'dart:math';
+
+String getPlayerMove(){
+    print("Make a choice Rock(R), Scissors(S) and Paper(P)");
+    String playermove = stdin.readLineSync.toString().toUpperCase();
+
+    switch (playermove) {
+      case "R":
+        return "Rock";
+        break;
+         case "S":
+        return "Scissors";
+        break;
+         case "P":
+        return "Paper";
+        
+        break;
+      default:
+      return "Quit";
+      break;
+    }
+}
+
+String getComputerMove(){
+  Random rand = Random();
+ int randNum = rand.nextInt(3);
  
-  int correctAnswer=0, userAnswer, operand1, operand2, operation, questionsAttempted =0, numCorrect =0;
-  Random rand = new Random();
- 
-   while(true){
-     operation = rand.nextInt(3);
-     operand1 = rand.nextInt(11);
-     operand2 = rand.nextInt(11);
-
-     switch (operation) {
-    case 0: //addition
-       print("$operand1 + $operand2 = ");
-       correctAnswer= operand1 + operand2;
-       break;
-    case 1: //subtraction
-        print("$operand1 - $operand2 = ");
-       correctAnswer= operand1 - operand2;
-       break;
-    case 2: //multiplication
-        print("$operand1 * $operand2 = ");
-       correctAnswer= operand1 * operand2;
-       break;  
-     default:
-   }
-
-String inTemp = stdin.readLineSync().toString();
-
-    try {
-       userAnswer = int.parse(inTemp);
-    } on FormatException {
-       print("uh oh, could not be turned into integer\n");
-       print("Thanks for playing!\n");
-       print("You got $numCorrect out of $questionsAttempted correct.");
-       break;
+ switch (randNum) {
+      case "R":
+        return "Rock";
+        break;
+         case "S":
+        return "Scissors";
+        break;
+         case "P":
+        return "Paper";
+        
+        break;
+      default:
+      return "Quit";
+      break;
     }
-
-
-    if (userAnswer == correctAnswer) {
-      numCorrect++;
-      print("Correct!");
-      print("To stop playing, press a letter on your keyboard");
-    }
-    else{
-      print("Wrong");
-      print("To stop playing, press a letter on your keyboard");
-    }
-
-
-questionsAttempted++;
-   }
 
 }
