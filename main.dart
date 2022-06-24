@@ -14,35 +14,46 @@
 // }
 
 
-import 'dart:io';
-import 'dart:core';
+// import 'dart:io';
+// import 'dart:core';
 
-void main(List<String> args) {
-  int selectedNum;
-  double fahren, deg, temp1, temp;
-  print("Welcome to the temperature Calc...");
-  print("Please select an option for conversion\n 1. Celcius to Fahrenheit\n 2. Fahrenheit to Celcius");
-  String selectNum= stdin.readLineSync().toString();
-  selectedNum = int.parse(selectNum);
+// void main(List<String> args) {
+//   int selectedNum;
+//   double fahren, deg, temp1, temp;
+//   String selectNum;
+//   print("Welcome to the temperature Calc...");
   
-  switch (selectedNum) {
-    case 1:
-   print("Please enter the temperature in *C");  
-  String temperature= stdin.readLineSync().toString();
-  temp = double.parse(temperature);
-  fahren = 1.8*temp + 32;
-   print("The temperature in Fahrenheit is ${fahren} F");
-      break;
-    case 2:
-      print("Please enter the temperature in F");  
-  String temperature= stdin.readLineSync().toString();
-  temp1 = double.parse(temperature);
-  deg = (temp1 - 32)/1.8;
-   print("The temperature in Fahrenheit is ${deg} *C");
-      break;
-    default:
-    print("Sorry option doesn't exit");
-  }
+//   do {
+//   print("Please select an option for conversion\n 1. Celcius to Fahrenheit\n 2. Fahrenheit to Celcius");
+//   selectNum = stdin.readLineSync().toString(); 
+//   selectedNum = int.parse(selectNum);
+// } while (selectedNum != 1 && selectedNum != 2);
+  
+//   switch (selectedNum) {
+//     case 1:
+//    print("Please enter the temperature in *C");  
+//   String temperature= stdin.readLineSync().toString();
+//   temp = double.parse(temperature);
+//   fahren = 1.8*temp + 32;
+//    print("The temperature in Fahrenheit is ${fahren} F");
+//       break;
+//     case 2:
+//       print("Please enter the temperature in F");  
+//   String temperature= stdin.readLineSync().toString();
+//   temp1 = double.parse(temperature);
+//   deg = (temp1 - 32)/1.8;
+//    print("The temperature in Fahrenheit is ${deg} *C");
+//       break;
+//     default:
+//     print("Sorry option doesn't exit");
+//   }
 
 
+// }
+
+
+import 'dart:math';
+void main(List<String> args) {
+  const PI = 3.4678;
+  print(PI);
 }
