@@ -1,5 +1,9 @@
-// import 'dart:math';
-// import 'dart:io';
+
+import 'dart:io';
+import 'dart:core';
+import 'dart:math';
+
+
 // void main(List<String> args) {
 // int guess;
 // Random rand = new Random();
@@ -250,33 +254,126 @@
 
 
 
-import 'dart:io';
+// import 'dart:io';
 
-int Fib(int n){
-  if (n<2) {
-    return n;
-  }
+// int Fib(int n){
+//   if (n<2) {
+//     return n;
+//   }
 
-  return Fib(n-2) + Fib(n-1);
-}
+//   return Fib(n-2) + Fib(n-1);
+// }
 
-void main(List<String> args) {
+// void main(List<String> args) {
 
- bool So = true;
-do {
-  int n ;
-   print("Remember to quit the program by pressing S");
-   print("What n(number) do you want to lookup to?");
-  String inTemp = stdin.readLineSync().toString().toUpperCase();
-    try {
-      if (inTemp == "S") {
-        So = false;
-      } else {
-        int n= int.parse(inTemp);
-     print("Fib($n) = ${Fib(n)}");
-      } 
-  } on FormatException {
-    print("Hey! Sorry couldn't turn that into an integer");
-  }
-} while (So);
-}
+//  bool So = true;
+// do {
+//   int n ;
+//    print("Remember to quit the program by pressing S");
+//    print("What n(number) do you want to lookup to?");
+//   String inTemp = stdin.readLineSync().toString().toUpperCase();
+//     try {
+//       if (inTemp == "S") {
+//         So = false;
+//       } else {
+//         int n= int.parse(inTemp);
+//      print("Fib($n) = ${Fib(n)}");
+//       } 
+//   } on FormatException {
+//     print("Hey! Sorry couldn't turn that into an integer");
+//   }
+// } while (So);
+// }
+
+
+// void addAnimal(List animalList){
+//   animalList.add("mouse");
+// }
+// void main(List<String> args) {
+//   List list1 = ["watermelon"];
+//   addAnimal(list1);
+//   print(list1);
+// }
+
+// import 'dart:core';
+
+// class Dice{
+//   int? sides;
+//   int? numberofDices;
+//   List<int>? values;
+// }
+// void main(List<String> args) {
+//   Dice d1 = new Dice();
+//   Dice d2 = new Dice();
+//   d1.sides=5;
+//   d1.numberofDices=4;
+//   d2.values = [4,5];
+//   print(d1.numberofDices);
+//   print(d2.values);
+// }
+
+
+
+// class Dice {
+//   int _sides =1;
+//   int  numberofDices=2;
+//   List<int> values = [4,6];
+
+//   int get maximumValue => sides * numberofDices;
+//   int get sides => _sides;
+
+//   set sides(int s){
+//     if (s < 2) {
+//       _sides =2;
+//     } else {
+//       _sides = s;
+//     }
+//   }
+
+// }
+
+
+
+
+
+//  class Dice {
+//   int _sides =10;
+//   int  numberofDices=2;
+//   List<int> _values = [4,6];
+
+//   int get maximumValue => sides * numberofDices;
+//   int get sides => _sides;
+
+//   set sides(int s){
+//     if (s < 2) {
+//       _sides =2;
+//     } else {
+//       _sides = s;
+//     }
+//   }
+
+//   void roll(){
+//     List<int> newValues = [];
+//     Random rand= new Random();
+//     for (var i = 0; i < numberofDices; i++) {
+//       newValues.add(rand.nextInt(sides)+1);
+//     }
+//     _values = newValues;
+//   }
+
+//   void printDice() => print(_values); 
+
+// }
+
+
+// void main(List<String> args) {
+//   Dice d = new Dice();
+//   // d.sides=10;
+//     d.roll();
+//     d.printDice();
+//     d.roll();
+//     d.printDice();
+//   print(d.maximumValue);
+// }
+
+
