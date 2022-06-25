@@ -109,25 +109,25 @@
 // }
 
 
-import 'dart:io';
-import 'dart:math';
+// import 'dart:io';
+// import 'dart:math';
 
-String getPlayerMove(){
-    print("Make a choice Rock(R), Scissors(S) and Paper(P)");
-    String playermove = stdin.readLineSync.toString().toUpperCase();
+// String getPlayerMove(){
+//     print("Make a choice Rock(R), Scissors(S) and Paper(P)");
+//     String playermove = stdin.readLineSync.toString().toUpperCase();
 
-    if (playermove == "R") {
-      return "Rock";
-    } 
-    else if(playermove == "S"){
-      return "Scissors";
-    }
-    else if(playermove == "P"){
-      return "Paper";
-    }
-    else{
-      return "Quit";
-    }
+//     if (playermove == "R") {
+//       return "Rock";
+//     } 
+//     else if(playermove == "S"){
+//       return "Scissors";
+//     }
+//     else if(playermove == "P"){
+//       return "Paper";
+//     }
+//     else{
+//       return "Quit";
+//     }
 
     // switch (playermove) {
     //   case "R":
@@ -144,7 +144,7 @@ String getPlayerMove(){
     //   return "Quit";
     //   break;
     // }
-}
+// }
 
 
 
@@ -214,20 +214,69 @@ String getPlayerMove(){
 
 
 
-void talkAbout(String toShout, shoutFunc) {
-print(shoutFunc(toShout));
+// void talkAbout(String talk, shotFunc){
+//   print(shotFunc(talk));
+// }
+
+// String exclame(String toExclame) => toExclame + "!";
+
+// String manyTalk(String toMany){
+//   String allTogether = "  \n";
+//    for(int i=0;i<10;i++){
+//      allTogether = allTogether + toMany;
+//    }
+//   return allTogether;
+// }
+
+// void main(List<String> args) {
+//   talkAbout("Hello", exclame);
+//   talkAbout("Tictoc", manyTalk);
+//   talkAbout("heavy", (String s)=> s.toUpperCase());
+
+// }
+
+
+
+// String addOn(String original, String additional, int times) {
+// if (times <= 0) { // exit condition to end "recursive loop"
+// return original;
+// }
+// return addOn(original + additional, additional, times - 1); // recursive call
+// }
+
+// void main(List<String> args) {
+//   addOn("hello", "!", 3);
+// }
+
+
+
+import 'dart:io';
+
+int Fib(int n){
+  if (n<2) {
+    return n;
+  }
+
+  return Fib(n-2) + Fib(n-1);
 }
-String exclame(String toExclame)
-=> toExclame + "!";
-String manyTalk(String toMany) {
-String allTogether = "";
-for (int i = 0; i < 10; i++) {
-allTogether = allTogether + toMany;
-}
-return allTogether;
-}
-// keep concatenating onto the end of allTogether
-void main() {
-talkAbout("Hello", exclame);
-talkAbout("TicToc", manyTalk);
+
+void main(List<String> args) {
+
+ bool So = true;
+do {
+  int n ;
+   print("Remember to quit the program by pressing S");
+   print("What n(number) do you want to lookup to?");
+  String inTemp = stdin.readLineSync().toString().toUpperCase();
+    try {
+      if (inTemp == "S") {
+        So = false;
+      } else {
+        int n= int.parse(inTemp);
+     print("Fib($n) = ${Fib(n)}");
+      } 
+  } on FormatException {
+    print("Hey! Sorry couldn't turn that into an integer");
+  }
+} while (So);
 }
