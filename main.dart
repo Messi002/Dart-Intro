@@ -116,14 +116,49 @@ String getPlayerMove(){
     print("Make a choice Rock(R), Scissors(S) and Paper(P)");
     String playermove = stdin.readLineSync.toString().toUpperCase();
 
-    switch (playermove) {
-      case "R":
+    if (playermove == "R") {
+      return "Rock";
+    } 
+    else if(playermove == "S"){
+      return "Scissors";
+    }
+    else if(playermove == "P"){
+      return "Paper";
+    }
+    else{
+      return "Quit";
+    }
+
+    // switch (playermove) {
+    //   case "R":
+    //     return "Rock";
+    //     break;
+    //      case "S":
+    //     return "Scissors";
+    //     break;
+    //      case "P":
+    //     return "Paper";
+        
+    //     break;
+    //   default:
+    //   return "Quit";
+    //   break;
+    // }
+}
+
+String getComputerMove1(){
+    print("Make a choice Rock(R), Scissors(S) and Paper(P)");
+    String computermove = stdin.readLineSync.toString().toUpperCase();
+      Random rand= new Random();
+       int move = rand.nextInt(3);
+    switch (move) {
+      case 0:
         return "Rock";
         break;
-         case "S":
+         case 1:
         return "Scissors";
         break;
-         case "P":
+         case 2:
         return "Paper";
         
         break;
@@ -133,25 +168,6 @@ String getPlayerMove(){
     }
 }
 
-String getComputerMove(){
-  Random rand = new Random();
- int randNum = rand.nextInt(3);
- 
- switch (randNum) {
-      case 0:
-        return "Rock";
-        break;
-         case 1:
-        return "Scissors";
-        break;
-         case 2:
-        return "Paper";
-        break;
-      default:
-      break;
-    }
-
-}
 
 String whoWon(String playerMove, String computerMove){
     if (playerMove == computerMove) { //if the same, it's a tie
@@ -169,14 +185,20 @@ String whoWon(String playerMove, String computerMove){
 }
 
 void main(List<String> args) {
-  
+
+
+
   print("Rock, Paper, Scissors shoot! ");
 
   String playerMove = getPlayerMove();
+
   print("You have entered $playerMove");
-  String computerMove = getComputerMove();
+  String computerMove = getComputerMove1();
   print("Computer's own choice $computerMove");
 
   print(whoWon(playerMove, computerMove));
+
+  
+
 
 }
