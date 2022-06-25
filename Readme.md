@@ -10,3 +10,4 @@ Part 4:
 Part 5:
     Beginning of OOP
     classes
+    Dice Rolling
