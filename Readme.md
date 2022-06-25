@@ -6,4 +6,4 @@ Part 2:
 Part 3:
     A simple math game
 Part 4:
-    Fibonnaci
+    Fibonacci
