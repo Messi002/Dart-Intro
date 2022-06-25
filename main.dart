@@ -146,59 +146,88 @@ String getPlayerMove(){
     // }
 }
 
-String getComputerMove1(){
-    print("Make a choice Rock(R), Scissors(S) and Paper(P)");
-    String computermove = stdin.readLineSync.toString().toUpperCase();
-      Random rand= new Random();
-       int move = rand.nextInt(3);
-    switch (move) {
-      case 0:
-        return "Rock";
-        break;
-         case 1:
-        return "Scissors";
-        break;
-         case 2:
-        return "Paper";
+
+
+
+
+// String getComputerMove1(){
+//     print("Make a choice Rock(R), Scissors(S) and Paper(P)");
+//     String computermove = stdin.readLineSync.toString().toUpperCase();
+//       Random rand= new Random();
+//        int move = rand.nextInt(3);
+//     switch (move) {
+//       case 0:
+//         return "Rock";
+//         break;
+//          case 1:
+//         return "Scissors";
+//         break;
+//          case 2:
+//         return "Paper";
         
-        break;
-      default:
-      return "Quit";
-      break;
-    }
-}
+//         break;
+//       default:
+//       return "Quit";
+//       break;
+//     }
+// }
 
 
-String whoWon(String playerMove, String computerMove){
-    if (playerMove == computerMove) { //if the same, it's a tie
-    return "Tie";
-    } else if (playerMove == "Rock" && computerMove == "Scissors") {
-    return "You Win!";
-    } else if (playerMove == "Scissors" && computerMove == "Paper") {
-    return "You Win!";
-    } else if (playerMove == "Paper" && computerMove == "Rock") {
-    return "You Win!";
-    } else { // if it's not a tie and you didn't win, computer won
-    return "Computer Wins!";
-}
+// String whoWon(String playerMove, String computerMove){
+//     if (playerMove == computerMove) { //if the same, it's a tie
+//     return "Tie";
+//     } else if (playerMove == "Rock" && computerMove == "Scissors") {
+//     return "You Win!";
+//     } else if (playerMove == "Scissors" && computerMove == "Paper") {
+//     return "You Win!";
+//     } else if (playerMove == "Paper" && computerMove == "Rock") {
+//     return "You Win!";
+//     } else { // if it's not a tie and you didn't win, computer won
+//     return "Computer Wins!";
+// }
 
-}
+// }
 
-void main(List<String> args) {
+// void main(List<String> args) {
 
+//  int selection = 0;
+// do {
 
+//  print("Rock, Paper, Scissors shoot! ");
 
-  print("Rock, Paper, Scissors shoot! ");
+//   String playerMove = getPlayerMove();
 
-  String playerMove = getPlayerMove();
+//   print("You have entered $playerMove");
+//   String computerMove = getComputerMove1();
+//   print("Computer's own choice $computerMove");
 
-  print("You have entered $playerMove");
-  String computerMove = getComputerMove1();
-  print("Computer's own choice $computerMove");
-
-  print(whoWon(playerMove, computerMove));
+//   print(whoWon(playerMove, computerMove));
 
   
 
 
+// } while (int selection =! 2);
+
+  
+
+// }
+
+
+
+void talkAbout(String toShout, shoutFunc) {
+print(shoutFunc(toShout));
+}
+String exclame(String toExclame)
+=> toExclame + "!";
+String manyTalk(String toMany) {
+String allTogether = "";
+for (int i = 0; i < 10; i++) {
+allTogether = allTogether + toMany;
+}
+return allTogether;
+}
+// keep concatenating onto the end of allTogether
+void main() {
+talkAbout("Hello", exclame);
+talkAbout("TicToc", manyTalk);
 }
