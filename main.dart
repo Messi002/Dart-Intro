@@ -377,3 +377,51 @@ import 'dart:math';
 // }
 
 
+// makeCoffee(String coffee,String? diary){
+//   if(diary != null){
+//     print('$coffee with $diary');
+//   }
+//   else{
+//     print("Black $coffee");
+//   }
+// }
+
+// void main(List<String> args) {
+//   makeCoffee("coffe","chocolate");
+// }
+
+
+//Null aware operator ?.
+
+// Using null safety, incorrectly:
+// class Coffee {
+//   String? _temperature;
+
+//   void heat() { _temperature = 'hot'; }
+//   void chill() { _temperature = 'iced'; }
+
+//   void checkTemp() {
+//     if (_temperature != null) {
+//       print('Ready to serve ' + _temperature! + '!');
+//     }
+//   }
+
+//   String serve() => _temperature! + ' coffee';
+// }
+//can be solved by storing the private null value in another  variable
+// main() {
+//   var coffee = Coffee();
+//   coffee.heat();
+//   coffee.serve();
+// }
+
+
+class Box<T> {
+  final T object;
+  Box(this.object);
+}
+
+main() {
+  Box<String>('a string');
+  Box<int?>(null);
+}
