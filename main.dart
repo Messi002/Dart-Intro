@@ -416,12 +416,45 @@ import 'dart:math';
 // }
 
 
-class Box<T> {
-  final T object;
-  Box(this.object);
+// class Box<T> {
+//   final T object;
+//   Box(this.object);
+// }
+
+// main() {
+//   Box<String>('a string');
+//   Box<int?>(null);
+// }
+
+
+/*Class with Constructor*/
+ class Dice {
+int _sides = 6;
+int _numberOfDice = 2;
+List<int> _values = [];
+ int get maximumValue => sides * numberOfDice;
+int get numberOfDice => _numberOfDice;
+int get sides => _sides;
+/// total is the sum of [//_values]
+//int get total => _values.fold(0, (first, second) => first + second);
+/// constructs a new Dice object
+Dice(this._sides, this._numberOfDice);
+/// generate random values for [_values]
+void roll() {
+List<int> newValues = [];
+Random rand = new Random();
+for (int i = 0; i < numberOfDice; i++) {
+newValues.add(rand.nextInt(sides) + 1);
+}
+_values = newValues;
+}
+// number from 1 to sides
+/// print the values of the dice
+void printDice() => print(_values);
 }
 
-main() {
-  Box<String>('a string');
-  Box<int?>(null);
+void main(List<String> args) {
+  Dice d1 = new Dice(4, 3);
+    d1.roll();
+    d1.printDice();
 }
