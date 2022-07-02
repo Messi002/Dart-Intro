@@ -455,39 +455,28 @@ import 'dart:math';
 // }
 
 
-class Dice{
-  int _sides =6;
-  int _numberOfDice=2;
-  List<int> _values =[2,4];
+class Player{
+     late String name;
+      int score=0;
 
+    Player(this.name);
 
-  int get diceSet => _sides;
-
-  set diceSet(int s) =>{
-        if(s < 2) {_sides = 2}
-        else{ _sides = s}
-  };
-
-  void rollDice(){
-      List<int> newValues = [];
-        Random rand= new Random();
-      for (var i = 0; i < _numberOfDice; i++) {
-        newValues.add(rand.nextInt(diceSet) + 1);
-      }
-    _values = newValues;
-  }
-
-  void printDice(){
-    print(_values);
-  }
-
+    String getMove(){
+      print('what do you want to do (R)oll, (S)tay or (Q)uit');
+    while (true) {
+      String selection = stdin.readLineSync.toString().toUpperCase();
+                  if (selection == "R") { // roll
+          return "Roll";
+          } else if (selection == "S") { // stay
+          return "Stay";
+          } else if (selection == "Q") { // quit
+          exit(0); }
+          
+    }
+    }
 }
 
 void main(List<String> args) {
-  Dice dice1 = new Dice();
-
-  dice1.diceSet=5;
-  dice1.rollDice();
-  dice1.printDice();
-
+      Player player1 = new Player('Austin');
+      player1.getMove();
 }
