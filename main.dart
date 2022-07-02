@@ -455,28 +455,52 @@ import 'dart:math';
 // }
 
 
-class Player{
-     late String name;
-      int score=0;
+// class Player{
+//      late String name;
+//       int score=0;
 
-    Player(this.name);
+//     Player(this.name);
 
-    String getMove(){
-      print('what do you want to do (R)oll, (S)tay or (Q)uit');
-    while (true) {
-      String selection = stdin.readLineSync.toString().toUpperCase();
-                  if (selection == "R") { // roll
-          return "Roll";
-          } else if (selection == "S") { // stay
-          return "Stay";
-          } else if (selection == "Q") { // quit
-          exit(0); }
+//     String getMove(){
+//       print('what do you want to do (R)oll, (S)tay or (Q)uit');
+//     while (true) {
+//       String selection = stdin.readLineSync.toString().toUpperCase();
+//                   if (selection == "R") { // roll
+//           return "Roll";
+//           } else if (selection == "S") { // stay
+//           return "Stay";
+//           } else if (selection == "Q") { // quit
+//           exit(0); }
           
-    }
-    }
+//     }
+//     }
+// }
+
+// void main(List<String> args) {
+//       Player player1 = new Player('Austin');
+//       player1.getMove();
+// }
+
+class sodaCans{
+  static double price = 2.0;
+  static double cost = 35.0;
+  static double? result;
+
+  void drink(){
+    print('Umm refreshing');
+  }
+
+  static double calCost(){
+    return result = double.parse((price/cost).toStringAsFixed(2));
+  }
 }
 
+// extension Ex on double{
+//   double toPrecision(int n) => double.parse(toStringAsFixed(n));
+// }
+
 void main(List<String> args) {
-      Player player1 = new Player('Austin');
-      player1.getMove();
+  sodaCans myCola = new sodaCans();
+  sodaCans.price= 3.00;
+  print(sodaCans.calCost());
 }
