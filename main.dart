@@ -428,33 +428,66 @@ import 'dart:math';
 
 
 /*Class with Constructor*/
- class Dice {
-int _sides = 6;
-int _numberOfDice = 2;
-List<int> _values = [];
- int get maximumValue => sides * numberOfDice;
-int get numberOfDice => _numberOfDice;
-int get sides => _sides;
+
 /// total is the sum of [//_values]
 //int get total => _values.fold(0, (first, second) => first + second);
 /// constructs a new Dice object
-Dice(this._sides, this._numberOfDice);
-/// generate random values for [_values]
-void roll() {
-List<int> newValues = [];
-Random rand = new Random();
-for (int i = 0; i < numberOfDice; i++) {
-newValues.add(rand.nextInt(sides) + 1);
-}
-_values = newValues;
-}
+// Dice(this._sides, this._numberOfDice);
+/// generate random values for [_
+/// values]
+// void roll() {
+// List<int> newValues = [];
+// Random rand = new Random();
+// for (int i = 0; i < numberOfDice; i++) {
+// newValues.add(rand.nextInt(sides) + 1);
+// }
+// _values = newValues;
+// }
 // number from 1 to sides
 /// print the values of the dice
-void printDice() => print(_values);
+// void printDice() => print(_values);
+//}
+
+// void main(List<String> args) {
+//   Dice d1 = new Dice(4, 3);
+//     d1.roll();
+//     d1.printDice();
+// }
+
+
+class Dice{
+  int _sides =6;
+  int _numberOfDice=2;
+  List<int> _values =[2,4];
+
+
+  int get diceSet => _sides;
+
+  set diceSet(int s) =>{
+        if(s < 2) {_sides = 2}
+        else{ _sides = s}
+  };
+
+  void rollDice(){
+      List<int> newValues = [];
+        Random rand= new Random();
+      for (var i = 0; i < _numberOfDice; i++) {
+        newValues.add(rand.nextInt(diceSet) + 1);
+      }
+    _values = newValues;
+  }
+
+  void printDice(){
+    print(_values);
+  }
+
 }
 
 void main(List<String> args) {
-  Dice d1 = new Dice(4, 3);
-    d1.roll();
-    d1.printDice();
+  Dice dice1 = new Dice();
+
+  dice1.diceSet=5;
+  dice1.rollDice();
+  dice1.printDice();
+
 }
