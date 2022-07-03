@@ -1,8 +1,6 @@
-
 import 'dart:io';
 import 'dart:core';
 import 'dart:math';
-
 
 // void main(List<String> args) {
 // int guess;
@@ -17,7 +15,6 @@ import 'dart:math';
 // } while(guess != answer); print("You got it");
 // }
 
-
 // import 'dart:io';
 // import 'dart:core';
 
@@ -26,23 +23,23 @@ import 'dart:math';
 //   double fahren, deg, temp1, temp;
 //   String selectNum;
 //   print("Welcome to the temperature Calc...");
-  
+
 //   do {
 //   print("Please select an option for conversion\n 1. Celcius to Fahrenheit\n 2. Fahrenheit to Celcius");
-//   selectNum = stdin.readLineSync().toString(); 
+//   selectNum = stdin.readLineSync().toString();
 //   selectedNum = int.parse(selectNum);
 // } while (selectedNum != 1 && selectedNum != 2);
-  
+
 //   switch (selectedNum) {
 //     case 1:
-//    print("Please enter the temperature in *C");  
+//    print("Please enter the temperature in *C");
 //   String temperature= stdin.readLineSync().toString();
 //   temp = double.parse(temperature);
 //   fahren = 1.8*temp + 32;
 //    print("The temperature in Fahrenheit is ${fahren} F");
 //       break;
 //     case 2:
-//       print("Please enter the temperature in F");  
+//       print("Please enter the temperature in F");
 //   String temperature= stdin.readLineSync().toString();
 //   temp1 = double.parse(temperature);
 //   deg = (temp1 - 32)/1.8;
@@ -52,17 +49,15 @@ import 'dart:math';
 //     print("Sorry option doesn't exit");
 //   }
 
-
 // }
-
 
 // import 'dart:math';
 // import 'dart:io';
 // void main(List<String> args) {
- 
+
 //   int correctAnswer=0, userAnswer, operand1, operand2, operation, questionsAttempted =0, numCorrect =0;
 //   Random rand = new Random();
- 
+
 //    while(true){
 //      operation = rand.nextInt(3);
 //      operand1 = rand.nextInt(11);
@@ -80,7 +75,7 @@ import 'dart:math';
 //     case 2: //multiplication
 //         print("$operand1 * $operand2 = ");
 //        correctAnswer= operand1 * operand2;
-//        break;  
+//        break;
 //      default:
 //    }
 
@@ -95,7 +90,6 @@ import 'dart:math';
 //        break;
 //     }
 
-
 //     if (userAnswer == correctAnswer) {
 //       numCorrect++;
 //       print("Correct!");
@@ -106,12 +100,10 @@ import 'dart:math';
 //       print("To stop playing, press a letter on your keyboard");
 //     }
 
-
 // questionsAttempted++;
 //    }
 
 // }
-
 
 // import 'dart:io';
 // import 'dart:math';
@@ -122,7 +114,7 @@ import 'dart:math';
 
 //     if (playermove == "R") {
 //       return "Rock";
-//     } 
+//     }
 //     else if(playermove == "S"){
 //       return "Scissors";
 //     }
@@ -133,26 +125,22 @@ import 'dart:math';
 //       return "Quit";
 //     }
 
-    // switch (playermove) {
-    //   case "R":
-    //     return "Rock";
-    //     break;
-    //      case "S":
-    //     return "Scissors";
-    //     break;
-    //      case "P":
-    //     return "Paper";
-        
-    //     break;
-    //   default:
-    //   return "Quit";
-    //   break;
-    // }
+// switch (playermove) {
+//   case "R":
+//     return "Rock";
+//     break;
+//      case "S":
+//     return "Scissors";
+//     break;
+//      case "P":
+//     return "Paper";
+
+//     break;
+//   default:
+//   return "Quit";
+//   break;
 // }
-
-
-
-
+// }
 
 // String getComputerMove1(){
 //     print("Make a choice Rock(R), Scissors(S) and Paper(P)");
@@ -168,14 +156,13 @@ import 'dart:math';
 //         break;
 //          case 2:
 //         return "Paper";
-        
+
 //         break;
 //       default:
 //       return "Quit";
 //       break;
 //     }
 // }
-
 
 // String whoWon(String playerMove, String computerMove){
 //     if (playerMove == computerMove) { //if the same, it's a tie
@@ -207,16 +194,9 @@ import 'dart:math';
 
 //   print(whoWon(playerMove, computerMove));
 
-  
-
-
 // } while (int selection =! 2);
 
-  
-
 // }
-
-
 
 // void talkAbout(String talk, shotFunc){
 //   print(shotFunc(talk));
@@ -239,8 +219,6 @@ import 'dart:math';
 
 // }
 
-
-
 // String addOn(String original, String additional, int times) {
 // if (times <= 0) { // exit condition to end "recursive loop"
 // return original;
@@ -251,8 +229,6 @@ import 'dart:math';
 // void main(List<String> args) {
 //   addOn("hello", "!", 3);
 // }
-
-
 
 // import 'dart:io';
 
@@ -278,13 +254,12 @@ import 'dart:math';
 //       } else {
 //         int n= int.parse(inTemp);
 //      print("Fib($n) = ${Fib(n)}");
-//       } 
+//       }
 //   } on FormatException {
 //     print("Hey! Sorry couldn't turn that into an integer");
 //   }
 // } while (So);
 // }
-
 
 // void addAnimal(List animalList){
 //   animalList.add("mouse");
@@ -312,8 +287,6 @@ import 'dart:math';
 //   print(d2.values);
 // }
 
-
-
 // class Dice {
 //   int _sides =1;
 //   int  numberofDices=2;
@@ -331,10 +304,6 @@ import 'dart:math';
 //   }
 
 // }
-
-
-
-
 
 //  class Dice {
 //   int _sides =10;
@@ -361,10 +330,9 @@ import 'dart:math';
 //     _values = newValues;
 //   }
 
-//   void printDice() => print(_values); 
+//   void printDice() => print(_values);
 
 // }
-
 
 // void main(List<String> args) {
 //   Dice d = new Dice();
@@ -375,7 +343,6 @@ import 'dart:math';
 //     d.printDice();
 //   print(d.maximumValue);
 // }
-
 
 // makeCoffee(String coffee,String? diary){
 //   if(diary != null){
@@ -389,7 +356,6 @@ import 'dart:math';
 // void main(List<String> args) {
 //   makeCoffee("coffe","chocolate");
 // }
-
 
 //Null aware operator ?.
 
@@ -415,7 +381,6 @@ import 'dart:math';
 //   coffee.serve();
 // }
 
-
 // class Box<T> {
 //   final T object;
 //   Box(this.object);
@@ -425,7 +390,6 @@ import 'dart:math';
 //   Box<String>('a string');
 //   Box<int?>(null);
 // }
-
 
 /*Class with Constructor*/
 
@@ -454,7 +418,6 @@ import 'dart:math';
 //     d1.printDice();
 // }
 
-
 // class Player{
 //      late String name;
 //       int score=0;
@@ -471,7 +434,7 @@ import 'dart:math';
 //           return "Stay";
 //           } else if (selection == "Q") { // quit
 //           exit(0); }
-          
+
 //     }
 //     }
 // }
@@ -481,26 +444,100 @@ import 'dart:math';
 //       player1.getMove();
 // }
 
-class sodaCans{
-  static double price = 2.0;
-  static double cost = 35.0;
-  static double? result;
+// class sodaCans{
+//   static double price = 2.0;
+//   static double cost = 35.0;
+//   static double? result;
 
-  void drink(){
-    print('Umm refreshing');
-  }
+//   void drink(){
+//     print('Umm refreshing');
+//   }
 
-  static double calCost(){
-    return result = double.parse((price/cost).toStringAsFixed(2));
-  }
-}
+//   static double calCost(){
+//     return result = double.parse((price/cost).toStringAsFixed(3));
+//   }
+// }
 
 // extension Ex on double{
 //   double toPrecision(int n) => double.parse(toStringAsFixed(n));
 // }
+// void main(List<String> args) {
+//   sodaCans myCola = new sodaCans();
+//   sodaCans.price= 3.00;
+//   print(sodaCans.calCost());
+// }
+// void main(List<String> args) {
+//   sodaCans myCola = new sodaCans();
+//   sodaCans.price= 3.00;
+//   print(sodaCans.calCost());
+// }
 
-void main(List<String> args) {
-  sodaCans myCola = new sodaCans();
-  sodaCans.price= 3.00;
-  print(sodaCans.calCost());
-}
+// abstract class Shape {
+//   double get perimeter;
+//   double get area;
+//   String get description;
+// }
+
+// class Circle extends Shape {
+//   double radius;
+//   Circle(this.radius);
+//   double get perimeter => radius * 2 * pi;
+//   double get area => pi * (radius * radius);
+//   String get description => "I am a circle with radius $radius";
+// }
+
+// class Rectangle extends Shape {
+//   double length, width;
+//   Rectangle(this.length, this.width);
+//   double get perimeter => length * 2 + width * 2;
+//   double get area => length * width;
+//   String get description =>
+//       "I am a rectangle with length $length and width $width.";
+// }
+
+// class Square extends Rectangle {
+//   Square(double side) : super(side, side);
+//   String get description => "I am a square with sides of length $length.";
+// }
+
+// void main(List<String> args) {
+//   late Shape randomShape;
+//   Random rand = new Random();
+//   int choice = rand.nextInt(3);
+
+//   switch (choice) {
+//     case 0:
+//       randomShape = new Circle(rand.nextInt(10) + 1.0);
+//       break;
+//     case 1:
+//       randomShape =
+//           new Rectangle(rand.nextInt(10) + 1.0, rand.nextInt(10) + 1.0);
+//       break;
+//     case 2:
+//       randomShape = new Square(rand.nextInt(10) + 1.0);
+
+//       break;
+//   }
+
+//   double userAnswer;
+
+//   print(randomShape.description);
+//   print('What is the area of the shape');
+//   String inTemp = stdin.readLineSync().toString();
+
+//   try {
+//     userAnswer = double.parse(inTemp);
+//     if (userAnswer.roundToDouble() == randomShape.area.roundToDouble()) {
+//       print('Good Job!');
+//     } else {
+//       print('Too bad, the answer is ${randomShape.area}!');
+//     }
+//   } on FormatException {
+//     print('That is not a number');
+//     return;
+//   }
+//   ;
+// }
+
+
+
