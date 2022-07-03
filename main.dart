@@ -540,4 +540,21 @@ import 'dart:math';
 // }
 
 
+class Shouter <T> {
+  int numberofTimes;
+  T? thingstoShout;
 
+  Shouter(this.numberofTimes, this.thingstoShout);
+
+  void Shout(){
+      for(int i = 0; i< numberofTimes; i++){
+        print('thingstoShout');
+      }
+  }
+
+}
+
+void main(List<String> args) {
+  Shouter <int> man = new Shouter(3, 5);
+  man.Shout();
+}
