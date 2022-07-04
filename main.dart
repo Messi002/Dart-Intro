@@ -575,26 +575,37 @@ import 'dart:math';
 
 // }
 
-extension Ex on double {
-  double toPrecision(int n) => double.parse(toStringAsFixed(n));
-}
+
+// enum Weather{
+//   sunny, 
+//   snowy, 
+//   cloudy, 
+//   rainy,
+// }
+
+// void main(List<String> args) {
+
+//   final weatherToday = Weather.snowy;
+//   switch (weatherToday) {
+//     case Weather.sunny:
+//       print('Put on Sunglasses');
+//       break;
+//       case Weather.snowy:
+//       print('Get your skis');
+      
+//       break;
+//       case Weather.cloudy:
+//       case Weather.rainy:
+//       print('Bring an umbrella');
+//       break;
+   
+//   }
+//   print(weatherToday.index);
+// }
+
 
 void main(List<String> args) {
-  print('Choose a color: (Y)ellow, (R)ed, (G)reen');
-  String inTemp = stdin.readLineSync().toString();
-
-  String command = '';
-  if (inTemp == 'red') {
-    command = 'Stop';
-  } else if(inTemp == 'yellow'){
-    command = 'Slow down';
-  } 
-  else if(inTemp == 'green'){
-    command = 'Go';
-  }
-  else {
-    command = 'INVALID COLOR';
-  }
-
-print(command);
+  print('Roll The Dice...');
+ 
+  
 }
