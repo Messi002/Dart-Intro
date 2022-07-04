@@ -540,21 +540,61 @@ import 'dart:math';
 // }
 
 
-class Shouter <T> {
-  int numberofTimes;
-  T? thingstoShout;
+// class Shouter <T> {
+//   int numberofTimes;
+//   T? thingstoShout;
 
-  Shouter(this.numberofTimes, this.thingstoShout);
+//   Shouter(this.numberofTimes, this.thingstoShout);
 
-  void Shout(){
-      for(int i = 0; i< numberofTimes; i++){
-        print('thingstoShout');
-      }
-  }
+//   void Shout(){
+//       for(int i = 0; i< numberofTimes; i++){
+//         print('thingstoShout');
+//       }
+//   }
 
+// }
+
+// void main(List<String> args) {
+//   Shouter <int> man = new Shouter(3, 5);
+//   man.Shout();
+// }
+
+
+// typedef String uniter(String s1, String s2);
+
+// String conCater(String s1, String s2) => s1 + s2;
+// String spacer(String s1, String s2) => s1 +" "+ s2;
+
+// void main(List<String> args) {
+//   uniter u1, u2;
+//     u1 = conCater;
+//     u2 = spacer;
+
+//   print(u1('Hello','you'));
+//   print(u1('Good','Gotta'));
+
+// }
+
+extension Ex on double {
+  double toPrecision(int n) => double.parse(toStringAsFixed(n));
 }
 
 void main(List<String> args) {
-  Shouter <int> man = new Shouter(3, 5);
-  man.Shout();
+  print('Choose a color: (Y)ellow, (R)ed, (G)reen');
+  String inTemp = stdin.readLineSync().toString();
+
+  String command = '';
+  if (inTemp == 'red') {
+    command = 'Stop';
+  } else if(inTemp == 'yellow'){
+    command = 'Slow down';
+  } 
+  else if(inTemp == 'green'){
+    command = 'Go';
+  }
+  else {
+    command = 'INVALID COLOR';
+  }
+
+print(command);
 }
