@@ -603,9 +603,26 @@ import 'dart:math';
 //   print(weatherToday.index);
 // }
 
+  String fullName(String firstName=({'austin'}), String lastName, age){
+      if (age != null) {
+        return "Age: $age firstName: $firstName, lastName: $lastName";
+      } else {
+        return "firstName: $firstName, lastName: $lastName";
+      }
+}
+
+  // Function myFunction(num number){
+  // return (num number1){
+  //   return number1 * number;
+  // };
+// }
+
+Function multiply=(int a, int b){
+  return a * b;
+};
 
 void main(List<String> args) {
-  print('Roll The Dice...');
  
-  
 }
+
+
