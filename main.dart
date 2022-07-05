@@ -603,7 +603,7 @@ import 'dart:math';
 //   print(weatherToday.index);
 // }
 
-  String fullName(String firstName=({'austin'}), String lastName, age){
+  String fullName(String firstName='Austin', String lastName, [age]){
       if (age != null) {
         return "Age: $age firstName: $firstName, lastName: $lastName";
       } else {
@@ -623,6 +623,116 @@ Function multiply=(int a, int b){
 
 void main(List<String> args) {
  
+}
+
+import 'package:flutter/material.dart';
+
+void main() => runApp(const myApp());
+
+class myApp extends StatelessWidget {
+  const myApp({Key? key}) : super(key: key);
+  final String title='Settings';
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: title,
+      //debugShowCheckedModeBanner: false,
+      home: Settings(title:title),
+    );
+  }
+}
+enum Names{ Profile, Settings}
+class Settings extends StatelessWidget {
+  const Settings({Key? key, required this.title}) : super(key: key);
+  final String title;
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(title: Text(title), leading: const Icon(Icons.arrow_back_sharp),elevation: 0,),
+        body: Padding(
+          padding: const EdgeInsets.only(left:10.0,top:10.0,right: 10.0,bottom: 14.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Text('Profile', style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
+              const SizedBox(height: 9,),
+              Expanded(
+                flex: 0,
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.grey,
+                    borderRadius: BorderRadius.circular(16.0),
+                  ),
+                  child: Column(
+                    children: const [
+                      ListTile(
+                        title: Text('Edit my profile'),
+                        trailing: Icon(Icons.arrow_forward_ios_sharp, size: 16,color: Colors.black,),
+                      ),
+                      SizedBox(width: 300, child: Divider(),),
+                      ListTile(
+                        title: Text('Share profile'),
+                        trailing: Icon(Icons.arrow_forward_ios_sharp, size: 16,color: Colors.black,),
+                      ),
+                      SizedBox(width: 300, child: Divider(),),
+                      ListTile(
+                        title: Text('Edit my profile'),
+                        trailing: Icon(Icons.arrow_forward_ios_sharp, size: 16,color: Colors.black,),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 20,),
+              Text('Settings', style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
+              SizedBox(height: 9,),
+              Expanded(
+                flex: 0,
+                child: Container(
+                  padding: const EdgeInsets.all(8.0),
+                  // width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    color: Colors.grey,
+                    borderRadius: BorderRadius.circular(16.0),
+                  ),
+                  child: Column(
+                    children: const [
+                      ListTile(
+                        title: Text('Language'),
+                        trailing: Icon(Icons.arrow_forward_ios_sharp, size: 16,color: Colors.black,),
+                      ),
+                      SizedBox(width: 300, child: Divider(),),
+                      ListTile(
+                        title: Text('Privacy policy'),
+                        trailing: Icon(Icons.arrow_forward_ios_sharp, size: 16,color: Colors.black,),
+                      ),
+                      SizedBox(width: 300, child: Divider(),),
+                      ListTile(
+                        title: Text('Terms of use'),
+                        trailing: Icon(Icons.arrow_forward_ios_sharp, size: 16,color: Colors.black,),
+                      ),
+                      SizedBox(width: 300, child: Divider(),),
+                      ListTile(
+                        title: Text('Rate the app'),
+                        trailing: Icon(Icons.arrow_forward_ios_sharp, size: 16,color: Colors.black,),
+                      ),
+                      SizedBox(width: 300, child: Divider(),),
+                      ListTile(
+                        title: Text('Share the app'),
+                        trailing: Icon(Icons.arrow_forward_ios_sharp, size: 16,color: Colors.black,),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 
