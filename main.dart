@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'dart:io';
 import 'dart:core';
 import 'dart:math';
@@ -621,15 +623,20 @@ import 'dart:math';
 
 void main(List<String> args) {
  var a = <int>{10,12,14,16,18};
-var b = <int>{5,7,9,11,13};
-var c = <int>{2,3,5,7};
+var b = <int>{};
+var c = <int>{2};
 
-print("b union a is");
-print(b.union(a));
+print("Using .isNotEmpty");
+print(a.isNotEmpty);
+print(b.isNotEmpty);
 
-print("b intersection a is");
-print(b.intersection(a));
+print("Using .isEmpty");
+print(c.single);
+print(b.isEmpty);
 
-print("b difference c is");
-print(b.difference(c));
+
+assert(7 >= 1,'this is true');
+
+
+
 }
