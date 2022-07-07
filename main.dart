@@ -603,13 +603,13 @@ import 'dart:math';
 //   print(weatherToday.index);
 // }
 
-  String fullName(String firstName='Austin', String lastName, [age]){
-      if (age != null) {
-        return "Age: $age firstName: $firstName, lastName: $lastName";
-      } else {
-        return "firstName: $firstName, lastName: $lastName";
-      }
-}
+//   String fullName(String firstName='Austin', String lastName, [age]){
+//       if (age != null) {
+//         return "Age: $age firstName: $firstName, lastName: $lastName";
+//       } else {
+//         return "firstName: $firstName, lastName: $lastName";
+//       }
+// }
 
   // Function myFunction(num number){
   // return (num number1){
@@ -617,12 +617,19 @@ import 'dart:math';
   // };
 // }
 
-Function multiply=(int a, int b){
-  return a * b;
-};
+
 
 void main(List<String> args) {
- 
+ var a = <int>{10,12,14,16,18};
+var b = <int>{5,7,9,11,13};
+var c = <int>{2,3,5,7};
+
+print("b union a is");
+print(b.union(a));
+
+print("b intersection a is");
+print(b.intersection(a));
+
+print("b difference c is");
+print(b.difference(c));
 }
-
-
