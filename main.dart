@@ -705,3 +705,36 @@ import 'dart:math';
   //Calling sub class method 
   // obj.display();
 // }
+
+
+class Person{
+  String pName;
+   int pAge;
+  Person(this.pName,this.pAge);
+  void showPerInfo(){
+     print('My Name is ${this.pName}');
+    print('My Age is ${this.pAge}');
+  }
+}
+
+class Employee extends Person{
+    int eSal;
+   Employee(eName,eAge, this.eSal,):super(eName,eAge);
+   void showEmpInfo(){
+    print("My salary is ${this.eSal}");
+    print('My Name is ${this.pName}');
+    print('My Age is ${this.pAge}');
+   }
+   
+}
+
+void main(List<String> args) {
+ 
+
+  try {
+     Employee emp1 = new Employee("Messi",2000, 15,);
+      emp1.showEmpInfo();
+  } catch (e) {
+    print(e);
+  }
+}
