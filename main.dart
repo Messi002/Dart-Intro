@@ -620,28 +620,76 @@ import 'dart:math';
 // }
 
 
+// class empCode{
+//    late String emp_code;
+//    static  late String name;
+  // empCode(this.emp_code){
+  //   print('The Employee code is ${this.emp_code}');
+  // }
+//   showInfo(){
+//     print('This is my name ${name}');
+//     print('This is my code ${emp_code}');
 
-void main(List<String> args) {
- var a = <int>{10,12,14,16,18};
-var b = <int>{};
-var c = <int>{2};
+//   }
+// }
 
-print("Using .isNotEmpty");
-print(a.isNotEmpty);
-print(b.isNotEmpty);
+// void main(List<String> args) {
+//   empCode Emp1 = new empCode();
+//   Emp1.emp_code='EMP001'; 
+//   empCode.name='Austin';
+//   Emp1.showInfo();
+// }
 
-print("Using .isEmpty");
-print(c.single);
-print(b.isEmpty);
+// class superClass {
+//   int num = 100;
+//     void display(){
+//     print("Parent class method");
+//   }
+// }
+
+// class subClass extends superClass{
+//   int num = 50;
+// void display(){
+//     print("child class method");
+//   }
+
+//   void printInfo(){
+//     print('This is the num ${num}');
+
+//     display();
+//     super.display();
+//   }
+    
 
 
-assert(7 >= 1,'this is true');
+// }
+
+// void main(List<String> args) {
+//   subClass obj = new subClass();
+//   obj.printInfo();
+// }
 
 
 
+
+
+class ParentClass
+{
+   ParentClass(){
+ print("Constructor of Parent Class");
+   }
 }
-
-
-
-
-
+class SubClass extends ParentClass
+{
+  SubClass(){
+   /* Compiler implicitly adds super() here as the
+ *  first statement of this constructor.
+ */
+    print("Constructor of Sub Class");
+  }
+  
+  display(){
+    print("Hello World!");
+  }
+   
+}
