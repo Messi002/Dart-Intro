@@ -673,23 +673,35 @@ import 'dart:math';
 
 
 
-class ParentClass
-{
-   ParentClass(){
- print("Constructor of Parent Class");
-   }
-}
-class SubClass extends ParentClass
-{
-  SubClass(){
+// class ParentClass
+// {
+//    ParentClass(String str){
+//      print(str);
+//  print("Constructor of Parent Class");
+//    }
+// }
+// class SubClass extends ParentClass
+// {
+//   SubClass():super('hello you'){
    /* Compiler implicitly adds super() here as the
  *  first statement of this constructor.
  */
-    print("Constructor of Sub Class");
-  }
+//     print("Constructor of Sub Class");
+//   }
   
-  display(){
-    print("Hello World!");
-  }
+//   display(){
+//     print("Hello World!");
+//   }
    
-}
+// }
+
+// void main(){
+
+  /* Creating object using default constructor. This 
+ * will invoke sub class constructor, which will 
+ * invoke parent class constructor
+ */
+  // SubClass obj= new SubClass();
+  //Calling sub class method 
+  // obj.display();
+// }
